@@ -1,9 +1,11 @@
 from App import application
+from dbconnect import enteremail,createusernameandpassword
 import pandas as pd
 import numpy as np
 #this is a comment3
-from flask import flash, redirect, render_template, request, session, abort, url_for, jsonify, Response
+from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, jsonify, Response
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user 
+from flask_mail import Mail, Message
 
 
 # flask-login
@@ -24,7 +26,8 @@ class User(UserMixin):
 
 # create some users with ids 1 to 20       
 users = [User(id) for id in range(1, 21)]
-
+mail = Mail()
+mail.init_app(application)
 
 
 @application.route('/', methods=['GET', 'POST'])
@@ -33,8 +36,8 @@ def home():
     return render_template('temp.html')
 
 
-@application.route('/landing', methods=['GET', 'POST'])
-def landing():
+@application.route('/login', methods=['GET', 'POST'])
+def login():
     if request.method == 'POST':
         if request.form['btn'] == 'Login':
             username = request.form['username']
@@ -43,36 +46,32 @@ def landing():
                 id = username.split('user')[1]
                 user = User(id)
                 login_user(user)
-            return redirect(url_for('home'))
-        else:
-            return abort(401)
-        temp_name = request.form['email']
-        print temp_name
-        insert_email(temp_name)
-        flash("Thank you for signing Up")
+                return redirect(url_for('home'))
+            else:
+                return abort(401)
+        if request.form['btn'] == 'Signup':
+            print "1"
+            email = request.form['email']
+            print "2"
+            enteremail(email)
+            print "3"
+            session['email'] = email
+            return redirect(url_for('complete_registration'))
     return render_template('index.html')
 
 
-
-
-
-
- 
-# somewhere to login
-@application.route("/login", methods=["GET", "POST"])
-def login():
+@application.route('/complete_registration', methods=['GET', 'POST'])
+def complete_registration():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']        
-        if password == username + "_secret":
-            id = username.split('user')[1]
-            user = User(id)
-            login_user(user)
-            return redirect(url_for('home'))
-        else:
-            return abort(401)
-    else:
-        return render_template('index.html')
+        if request.form['btn'] == 'Register':
+            username = request.form['username']
+            password = request.form['password']
+            email = session.get('email', None)
+            print email
+            createusernameandpassword(email,username,password)
+            return render_template('temp.html')
+    return render_template('complete_registration.html')
+
 
 
 # somewhere to logout

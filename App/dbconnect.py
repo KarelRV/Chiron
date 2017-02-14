@@ -21,28 +21,26 @@ def connect_login(name,password):
 	return result
 
 
-def failed_counter_count(name):
+def enteremail(email):
 	import pymysql
 	import pymysql.cursors
 	import pandas as pd
 	connection = pymysql.connect(host='nabuproject.ch1ktyvsreco.eu-west-1.rds.amazonaws.com',
 	user='Admin',
 	password='Nabu2016!CJKL',
-	db='Brannas',
+	db='Chiron',
 	charset='utf8mb4',
 	cursorclass=pymysql.cursors.DictCursor)
 
 	with connection.cursor() as cursor:
 		# Read a single recor
-		sql = "select count(*) from login_failed_temp where user_name = '{0}';".format(name)
+		sql = "insert into Users_1 values(NULL,NULL,NULL,'{0}',NOW())".format(email)
 		cursor.execute(sql)
-		result = pd.DataFrame(cursor.fetchall())
+		connection.commit()
 	connection.close()
-	result = result.iat[0,0]
-	return result
 ######################################
 
-def failed_counter_adder(name):
+def createusernameandpassword(email,username,passwords):
 	import pymysql
 	import pymysql.cursors
 	import pandas as pd
@@ -55,7 +53,7 @@ def failed_counter_adder(name):
 
 	with connection.cursor() as cursor:
 		# Read a single recor
-		sql = "insert into login_failed_temp values('{0}')".format(name)
+		sql = "UPDATE Chiron.Users_1 SET username='{1}', password='{2}' WHERE email='{0}' or email = 'karel@test.com'".format(email,username,passwords)
 		cursor.execute(sql)
 		connection.commit()
 	connection.close()
