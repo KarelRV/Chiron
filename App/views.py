@@ -26,6 +26,19 @@ class User(UserMixin):
 
 # create some users with ids 1 to 20       
 users = [User(id) for id in range(1, 21)]
+
+
+#would like to get this section out of this .py file
+application.config.update(
+MAIL_SERVER = 'smtp.gmail.com',
+MAIL_PORT = 465,
+MAIL_USE_SSL = True,
+MAIL_USERNAME = 'projectchiron123@gmail.com',
+MAIL_PASSWORD = 'WhyAlwaysMe',
+MAIL_USE_TLS = False
+)
+
+
 mail = Mail()
 mail.init_app(application)
 
@@ -35,6 +48,16 @@ mail.init_app(application)
 def home():
     return render_template('temp.html')
 
+
+@application.route('/send-mail')
+def send_mail():
+    msg = mail.send_message(
+        'Send Mail tutorial!',
+        sender='projectchiron123@gmail.com',
+        recipients=['karelrverhoeven@gmail.com'],
+        body="Congratulations you've succeeded!"
+    )
+    return 'Mail sent'
 
 @application.route('/login', methods=['GET', 'POST'])
 def login():
