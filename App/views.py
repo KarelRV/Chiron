@@ -1,5 +1,6 @@
 from App import application
 from dbconnect import enteremail,createusernameandpassword
+from Emailer import send_mail
 import pandas as pd
 import numpy as np
 #this is a comment3
@@ -29,34 +30,18 @@ users = [User(id) for id in range(1, 21)]
 
 
 #would like to get this section out of this .py file
-application.config.update(
-MAIL_SERVER = 'smtp.gmail.com',
-MAIL_PORT = 465,
-MAIL_USE_SSL = True,
-MAIL_USERNAME = 'projectchiron123@gmail.com',
-MAIL_PASSWORD = 'WhyAlwaysMe',
-MAIL_USE_TLS = False
-)
-
-
-mail = Mail()
-mail.init_app(application)
 
 
 @application.route('/', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def home():
     return render_template('temp.html')
 
 
-@application.route('/send-mail')
-def send_mail():
-    msg = mail.send_message(
-        'Send Mail tutorial!',
-        sender='projectchiron123@gmail.com',
-        recipients=['karelrverhoeven@gmail.com'],
-        body="Congratulations you've succeeded!"
-    )
+
+@application.route('/test_mail')
+def test_mail():
+    send_mail('karelrverhoeven@gmail.com')
     return 'Mail sent'
 
 @application.route('/login', methods=['GET', 'POST'])
