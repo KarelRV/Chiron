@@ -1,5 +1,5 @@
 from App import application
-from dbconnect import enteremail,createusernameandpassword
+from dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles
 from Emailer import send_mail
 import pandas as pd
 import numpy as np
@@ -68,6 +68,17 @@ def login():
     return render_template('index.html')
 
 
+@application.route('/complete_profile', methods=['GET', 'POST'])
+def complete_profile():
+    if request.method == 'POST':
+        if request.form['btn'] == 'Complete':
+            email = session.get('email', None)
+            location = request.form['location']
+            job = request.form['job']
+            complete_profiles(email,location,job)
+            return render_template('temp_landing.html')
+    return render_template('complete_profile.html')
+
 @application.route('/complete_registration', methods=['GET', 'POST'])
 def complete_registration():
     if request.method == 'POST':
@@ -83,6 +94,16 @@ def complete_registration():
 
 @application.route('/welcome_page/<username>', methods=['GET', 'POST'])
 def welcome(username):
+    if request.method == 'POST':
+        print "1"
+        #if request.form['btn'] == 'Complete':
+        print "2"
+        email = retrieve_email(username)
+        print "3"
+        session['email'] = email
+        print "4"
+        return redirect(url_for('complete_profile'))
+        print "5"
     return render_template('temp.html',username=username)
 
 # somewhere to logout
