@@ -77,11 +77,13 @@ def complete_registration():
             email = session.get('email', None)
             print email
             createusernameandpassword(email,username,password)
-            send_mail(email)
+            send_mail(email,username)
             return render_template('temp.html')
     return render_template('complete_registration.html')
 
-
+@application.route('/welcome_page/<username>', methods=['GET', 'POST'])
+def welcome(username):
+    return render_template('temp.html',username=username)
 
 # somewhere to logout
 @application.route("/logout")

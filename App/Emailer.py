@@ -2,7 +2,7 @@ from App import application
 from flask_mail import Mail, Message
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, jsonify, Response
 
-def send_mail(email_adress):
+def send_mail(email_adress,username):
 	application.config.update(
 	MAIL_SERVER = 'smtp.gmail.com',
 	MAIL_PORT = 465,
@@ -14,10 +14,10 @@ def send_mail(email_adress):
 	mail = Mail()
 	mail.init_app(application)
 	msg = mail.send_message(
-		'Welcome to Chiron!',
+		'Welcome to Chiron! {0}'.format(username),
 		sender='projectchiron123@gmail.com',
 		recipients=[email_adress],
-		body="Confirm Email >>>   http://0.0.0.0:4000/"
+		body="Confirm Email >>>   http://0.0.0.0:4000/welcome_page/{0}".format(username)
 	)
 
 
