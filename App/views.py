@@ -33,7 +33,7 @@ users = [User(id) for id in range(1, 21)]
 
 
 @application.route('/', methods=['GET', 'POST'])
-#@login_required
+@login_required
 def home():
     return render_template('temp.html')
 
@@ -77,6 +77,7 @@ def complete_registration():
             email = session.get('email', None)
             print email
             createusernameandpassword(email,username,password)
+            send_mail(email)
             return render_template('temp.html')
     return render_template('complete_registration.html')
 
