@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Chiron$application.coverage" NAME="application Coverage Results" MODIFIED="1487269131185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chiron$application.coverage" NAME="application Coverage Results" MODIFIED="1487346485417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,15 +26,25 @@
     <favorites_list name="Chiron" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="78" column="41" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="41" />
+            <state relative-caret-position="219">
+              <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="complete_registration.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/complete_registration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-15">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,83 +59,71 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/templates/temp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="113" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="-996">
               <caret line="54" column="185" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="185" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconnectp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/dbconnectp.py">
+      <file leaf-file-name="employer_edit_vacancy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/employer_edit_vacancy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1487168969000" expanded="true" signature="379:508" ph="select sum(v... user_name" />
-                <marker date="1487168969000" expanded="true" signature="412:505" ph="select case login" />
-                <marker date="1487168969000" expanded="true" signature="1034:1096" ph="select count... login_failed_temp" />
-                <marker date="1487168969000" expanded="true" signature="1651:1694" ph="insert into login_failed_temp... " />
-                <marker date="1487168969000" expanded="true" signature="2189:2243" ph="delete from " />
-                <marker date="1487168969000" expanded="true" signature="2726:2770" ph="select Searc... Navbar_Search" />
-                <marker date="1487168969000" expanded="true" signature="3306:3329" ph="select * fro... customers" />
-                <marker date="1487168969000" expanded="true" signature="3865:3904" ph="select disti... customers" />
-                <marker date="1487168969000" expanded="true" signature="4436:4471" ph="select disti... customers" />
-                <marker date="1487168969000" expanded="true" signature="5046:5183" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="6994:7172" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="7286:7468" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="7580:7758" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="7872:8033" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="8141:8297" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="8407:8567" ph="select provi... customers" />
-                <marker date="1487168969000" expanded="true" signature="9355:9414" ph="select date,... " />
-                <marker date="1487168969000" expanded="true" signature="9926:9959" ph="select * fro... orders" />
-                <marker date="1487168969000" expanded="true" signature="10468:10514" ph="select * fro... customers" />
-                <marker date="1487168969000" expanded="true" signature="11307:11360" ph="UPDATE custo... " />
-                <marker date="1487168969000" expanded="true" signature="11601:11656" ph="UPDATE custo... " />
-                <marker date="1487168969000" expanded="true" signature="12195:12233" ph="insert into login... " />
-                <marker date="1487168969000" expanded="true" signature="12852:13149" ph="insert into customers" />
-                <marker date="1487168969000" expanded="true" signature="13846:13986" ph="insert into orders" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconnect.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/dbconnect.py">
+      <file leaf-file-name="view_employees.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/view_employees.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="61" column="11" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="11" />
-              <folding>
-                <marker date="1487262624000" expanded="true" signature="379:508" ph="select sum(v... user_name" />
-                <marker date="1487262624000" expanded="true" signature="412:505" ph="select case login" />
-                <marker date="1487262624000" expanded="true" signature="1024:1088" ph="insert into Users_1... " />
-                <marker date="1487262624000" expanded="true" signature="1606:1708" ph="UPDATE Chiro... " />
-                <marker date="1487262624000" expanded="true" signature="2193:2290" ph="UPDATE Chiro... " />
-                <marker date="1487262624000" expanded="true" signature="2755:2810" ph="SELECT email... Users_1" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/templates/logout.html">
+      <file leaf-file-name="employer_add_vacancy.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/employer_add_vacancy.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/temp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="employer_home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/employer_home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit_employer_profile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/templates/edit_employer_profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -146,9 +144,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/App/templates/logout.html" />
+        <option value="$PROJECT_DIR$/App/templates/edit_employer_profile.html" />
+        <option value="$PROJECT_DIR$/App/templates/employer_add_vacancy.html" />
+        <option value="$PROJECT_DIR$/App/templates/view_employees.html" />
+        <option value="$PROJECT_DIR$/App/templates/employer_edit_vacancy.html" />
+        <option value="$PROJECT_DIR$/App/templates/employer_home.html" />
         <option value="$PROJECT_DIR$/App/templates/temp.html" />
         <option value="$PROJECT_DIR$/App/views.py" />
-        <option value="$PROJECT_DIR$/App/templates/logout.html" />
       </list>
     </option>
   </component>
@@ -170,7 +173,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -396,6 +399,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -560,23 +569,23 @@
     <frame x="0" y="23" width="1440" height="817" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2565517" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2537931" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -596,19 +605,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/templates/temp.html">
+    <entry file="file://$PROJECT_DIR$/App/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="113" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="54" column="185" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="185" />
-          <folding />
+        <state relative-caret-position="1170">
+          <caret line="78" column="41" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -620,13 +623,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/views.py">
+    <entry file="file://$PROJECT_DIR$/App/templates/temp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="78" column="41" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="9" column="113" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="185" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="185" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/dbconnect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="915">
           <caret line="61" column="11" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="11" />
           <folding>
             <marker date="1487262624000" expanded="true" signature="379:508" ph="select sum(v... user_name" />
@@ -680,9 +689,155 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/templates/logout.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/dbconnect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="11" />
+          <folding>
+            <marker date="1487262624000" expanded="true" signature="379:508" ph="select sum(v... user_name" />
+            <marker date="1487262624000" expanded="true" signature="412:505" ph="select case login" />
+            <marker date="1487262624000" expanded="true" signature="1024:1088" ph="insert into Users_1... " />
+            <marker date="1487262624000" expanded="true" signature="1606:1708" ph="UPDATE Chiro... " />
+            <marker date="1487262624000" expanded="true" signature="2193:2290" ph="UPDATE Chiro... " />
+            <marker date="1487262624000" expanded="true" signature="2755:2810" ph="SELECT email... Users_1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/dbconnectp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1487168969000" expanded="true" signature="379:508" ph="select sum(v... user_name" />
+            <marker date="1487168969000" expanded="true" signature="412:505" ph="select case login" />
+            <marker date="1487168969000" expanded="true" signature="1034:1096" ph="select count... login_failed_temp" />
+            <marker date="1487168969000" expanded="true" signature="1651:1694" ph="insert into login_failed_temp... " />
+            <marker date="1487168969000" expanded="true" signature="2189:2243" ph="delete from " />
+            <marker date="1487168969000" expanded="true" signature="2726:2770" ph="select Searc... Navbar_Search" />
+            <marker date="1487168969000" expanded="true" signature="3306:3329" ph="select * fro... customers" />
+            <marker date="1487168969000" expanded="true" signature="3865:3904" ph="select disti... customers" />
+            <marker date="1487168969000" expanded="true" signature="4436:4471" ph="select disti... customers" />
+            <marker date="1487168969000" expanded="true" signature="5046:5183" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="6994:7172" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="7286:7468" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="7580:7758" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="7872:8033" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="8141:8297" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="8407:8567" ph="select provi... customers" />
+            <marker date="1487168969000" expanded="true" signature="9355:9414" ph="select date,... " />
+            <marker date="1487168969000" expanded="true" signature="9926:9959" ph="select * fro... orders" />
+            <marker date="1487168969000" expanded="true" signature="10468:10514" ph="select * fro... customers" />
+            <marker date="1487168969000" expanded="true" signature="11307:11360" ph="UPDATE custo... " />
+            <marker date="1487168969000" expanded="true" signature="11601:11656" ph="UPDATE custo... " />
+            <marker date="1487168969000" expanded="true" signature="12195:12233" ph="insert into login... " />
+            <marker date="1487168969000" expanded="true" signature="12852:13149" ph="insert into customers" />
+            <marker date="1487168969000" expanded="true" signature="13846:13986" ph="insert into orders" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/temp_landing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/employer_add_vacancy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/view_employees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/employer_home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="104" selection-start-line="29" selection-start-column="104" selection-end-line="29" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/complete_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/complete_registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-996">
+          <caret line="54" column="185" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="185" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/edit_employer_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/templates/employer_edit_vacancy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="56" column="65" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

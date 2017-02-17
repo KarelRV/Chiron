@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ username }}'s Home</title>
+</head>
+<body>
+Employer landing page - choose your action
+<p></p>
+
+<form action="{{ url_for('employeredit', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>Edit Info</button>
+</form>
+<p></p>
+<form action="{{ url_for('employereditvacancy', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>Edit Vacancies</button>
+</form>
+<p></p>
+<form action="{{ url_for('employeraddvacancy', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>Add Vacancies</button>
+</form>
+<p></p>
+<form action="{{ url_for('viewemployees', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>View Employees</button>
+</form>
+<p></p>
+
+<p></p>
+<form action="{{ url_for('logout', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>Logout</button>
+</form>
+</body>
+</html>

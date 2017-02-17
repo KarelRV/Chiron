@@ -32,10 +32,10 @@ users = [User(id) for id in range(1, 21)]
 #would like to get this section out of this .py file
 
 
-@application.route('/', methods=['GET', 'POST'])
+@application.route('/<username>', methods=['GET', 'POST'])
 @login_required
-def home():
-    return render_template('temp.html')
+def home(username):
+    return render_template('temp.html', username=username)
 
 
 
@@ -54,7 +54,7 @@ def login():
                 id = username.split('user')[1]
                 user = User(id)
                 login_user(user)
-                return redirect(url_for('home'))
+                return redirect(url_for('home', username=username))
             else:
                 return abort(401)
         if request.form['btn'] == 'Signup':
@@ -113,6 +113,48 @@ def logout():
     logout_user()
     # return Response('<p>Logged out</p>')
     return render_template('logout.html')
+
+
+############################################coetzee additions - employer related##########################################
+##Remove comments later
+############################################coetzee additions - employer related##########################################
+# employer home page
+@application.route('/employerhome/<username>', methods=['GET','POST'])
+@login_required
+def employerhome(username):
+
+    return render_template('employer_home.html', username=username)
+
+# employer edit page
+@application.route('/employeredit/<username>', methods=['GET','POST'])
+@login_required
+def employeredit(username):
+
+    return render_template('edit_employer_profile.html', username=username)
+
+# employer add vacancy
+@application.route('/employeraddvacancy/<username>', methods=['GET','POST'])
+@login_required
+def employeraddvacancy(username):
+
+    return render_template('employer_add_vacancy.html', username=username)
+
+# employer edit vacancy
+@application.route('/employereditvacancy/<username>', methods=['GET','POST'])
+@login_required
+def employereditvacancy(username):
+
+    return render_template('employer_edit_vacancy.html', username=username)
+
+# view employees
+@application.route('/viewemployees/<username>', methods=['GET','POST'])
+@login_required
+def viewemployees(username):
+
+    return render_template('view_employees.html', username=username)
+
+############################################coetzee additions - employer related##########################################
+
 
 # handle login failed
 @application.errorhandler(401)

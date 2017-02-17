@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ username }} - Edit Vacancies</title>
+</head>
+<body>
+Placeholder for editing {{ username }}'s vacancies.
+<p></p>
+<form action="{{ url_for('employerhome', username=username) }}">
+        <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>{{ username }} Home</button>
+</form>
+</body>
+</html>
