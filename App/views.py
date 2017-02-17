@@ -111,8 +111,8 @@ def welcome(username):
 @login_required
 def logout():
     logout_user()
-    return Response('<p>Logged out</p>')
-
+    # return Response('<p>Logged out</p>')
+    return render_template('logout.html')
 
 # handle login failed
 @application.errorhandler(401)
