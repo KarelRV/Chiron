@@ -5,7 +5,44 @@
     <title>View Employees</title>
 </head>
 <body>
-Placeholder for viewing employees list.
+      <div class="row">
+
+        {% for x in customers.index%}
+
+            <div class="col-lg-4">
+
+
+                {# some display thing here #}
+                <div><img class="custpic" src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Image Placeholder" /></div>
+
+                <div class="cust_info"><strong>Name</strong></div> {{ " " }} : {{ customers.iat[x, 4] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>Surname</strong></div> {{ " " }} : {{ customers.iat[x, 7] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>Occupation</strong></div> {{ " " }} : {{ customers.iat[x, 5] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>City</strong></div> {{ " " }} : {{ customers.iat[x, 0] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>Province</strong></div> {{ " " }} : {{ customers.iat[x, 6] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>Contact Number</strong></div> {{ " " }} : {{ customers.iat[x, 2] }}
+                <div style="clear:both"></div><p></p>
+
+                <div class="cust_info"><strong>Contact Email</strong></div> {{ " " }} : {{ customers.iat[x, 1] }}
+                <div style="clear:both"></div><p></p>
+
+
+            </div>
+
+        {% endfor %}
+
+      </div>
+
 <p></p>
 <form action="{{ url_for('employerhome', username=username) }}">
         <button class="btn btn-primary btn-lg" name="username" type="submit" value={{ username }}>{{ username }} Home</button>

@@ -97,4 +97,22 @@ def retrieve_email(username):
 	result = result.iat[0,0]
 	return result
 
+def view_customers():
+	import pymysql
+	import pymysql.cursors
+	import pandas as pd
+	connection = pymysql.connect(host='nabuproject.ch1ktyvsreco.eu-west-1.rds.amazonaws.com',
+	user='Admin',
+	password='Nabu2016!CJKL',
+	db='Chiron',
+	charset='utf8mb4',
+	cursorclass=pymysql.cursors.DictCursor)
 
+	with connection.cursor() as cursor:
+		# Read all employee records
+		sql = "select * from temp_employees"
+		cursor.execute(sql)
+		result = pd.DataFrame(cursor.fetchall())
+		print(result)
+	connection.close()
+	return result

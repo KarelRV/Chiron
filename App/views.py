@@ -1,5 +1,5 @@
 from App import application
-from dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles
+from dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles, view_customers
 from Emailer import send_mail
 import pandas as pd
 import numpy as np
@@ -14,6 +14,7 @@ login_manager = LoginManager()
 login_manager.init_app(application)
 login_manager.login_view = "login"
 # silly user model
+
 class User(UserMixin):
 
     def __init__(self, id):
@@ -158,7 +159,8 @@ def employereditvacancy(username):
 @login_required
 def viewemployees(username):
 
-    return render_template('view_employees.html', username=username)
+    customers = view_customers()
+    return render_template('view_employees.html', username=username, customers=customers)
 
 ############################################coetzee additions - employer related##########################################
 
