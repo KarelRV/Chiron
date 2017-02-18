@@ -31,12 +31,16 @@ users = [User(id) for id in range(1, 21)]
 
 #would like to get this section out of this .py file
 
+@application.route('/')
+@login_required
+def index():
+
+    return redirect(url_for('login'))
 
 @application.route('/<username>', methods=['GET', 'POST'])
 @login_required
 def home(username):
-    return render_template('temp.html', username=username)
-
+    return render_template('home.html', username=username)  # becomes the basic site landing page after login
 
 
 @application.route('/test_mail')
@@ -56,55 +60,58 @@ def login():
                 login_user(user)
                 return redirect(url_for('home', username=username))
             else:
-                return abort(401)
+                return abort(401)  # good place to add a fun error page
+
         if request.form['btn'] == 'Signup':
             print "1"
+            name = request.form['name']
+            surname = request.form['surname']
             email = request.form['email']
             print "2"
             enteremail(email)
             print "3"
             session['email'] = email
-            return redirect(url_for('complete_registration'))
+            return redirect(url_for('complete_registration', username=name))
     return render_template('index.html')
 
 
-@application.route('/complete_profile', methods=['GET', 'POST'])
-def complete_profile():
+@application.route('/complete_profile/<username>', methods=['GET', 'POST'])
+def complete_profile(username):
     if request.method == 'POST':
         if request.form['btn'] == 'Complete':
             email = session.get('email', None)
             location = request.form['location']
             job = request.form['job']
-            complete_profiles(email,location,job)
-            return render_template('temp_landing.html')
-    return render_template('complete_profile.html')
+            complete_profiles(email, location, job)
+            return render_template('temp_landing.html', username=username)
+    return render_template('complete_profile.html', username=username)
 
-@application.route('/complete_registration', methods=['GET', 'POST'])
-def complete_registration():
+@application.route('/complete_registration/<username>', methods=['GET', 'POST'])
+def complete_registration(username):
     if request.method == 'POST':
         if request.form['btn'] == 'Register':
             username = request.form['username']
             password = request.form['password']
             email = session.get('email', None)
             print email
-            createusernameandpassword(email,username,password)
-            send_mail(email,username)
-            return render_template('temp.html')
-    return render_template('complete_registration.html')
+            createusernameandpassword(email, username, password)
+            send_mail(email, username)
+            return render_template('check_mail.html', username=username)  # change to redirect to a 'check your mail to complete registration' landing page
+
+    return render_template('complete_registration.html', username=username)
 
 @application.route('/welcome_page/<username>', methods=['GET', 'POST'])
 def welcome(username):
     if request.method == 'POST':
         print "1"
-        #if request.form['btn'] == 'Complete':
-        print "2"
-        email = retrieve_email(username)
-        print "3"
-        session['email'] = email
-        print "4"
-        return redirect(url_for('complete_profile'))
-        print "5"
-    return render_template('temp.html',username=username)
+        if request.form['btn'] == 'Complete':
+            print "2"
+            email = retrieve_email(username)
+            print "3"
+            session['email'] = email
+            print "4"
+            return redirect(url_for('complete_profile', username=username))
+    return render_template('welcome.html', username=username)
 
 # somewhere to logout
 @application.route("/logout")
@@ -119,7 +126,7 @@ def logout():
 ##Remove comments later
 ############################################coetzee additions - employer related##########################################
 # employer home page
-@application.route('/employerhome/<username>', methods=['GET','POST'])
+@application.route('/employerhome/<username>', methods=['GET', 'POST'])
 @login_required
 def employerhome(username):
 
