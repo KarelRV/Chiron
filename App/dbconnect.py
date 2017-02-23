@@ -53,7 +53,7 @@ def createusernameandpassword(email,username,passwords):
 
 	with connection.cursor() as cursor:
 		# Read a single recor
-		sql = "UPDATE Chiron.Users_1 SET username='{1}', password='{2}' WHERE email='{0}' or email = 'karel@test.com'".format(email,username,passwords)
+		sql = "UPDATE Chiron.Users_1 SET username='{1}', password='{2}' WHERE email='{0}'".format(email,username,passwords)
 		cursor.execute(sql)
 		connection.commit()
 	connection.close()
@@ -72,7 +72,7 @@ def complete_profiles(email,location,job):
 
 	with connection.cursor() as cursor:
 		# Read a single recor
-		sql = "UPDATE Chiron.Users_1 SET location='{1}', job='{2}' WHERE email='{0}' or email = 'karel@test.com'".format(email,location,job)
+		sql = "UPDATE Chiron.Users_1 SET location='{1}', job='{2}' WHERE email='{0}'".format(email,location,job)
 		cursor.execute(sql)
 		connection.commit()
 	connection.close()
