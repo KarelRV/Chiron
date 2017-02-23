@@ -1,12 +1,8 @@
 from App import application
-# App import dbconnect
-#from App import Emailer
-from . import dbconnect
 from .dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles, view_customers
 from .Emailer import send_mail
 import pandas as pd
 import numpy as np
-#this is a comment3
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, jsonify, Response
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user 
 from flask_mail import Mail, Message
