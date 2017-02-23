@@ -82,7 +82,10 @@ def complete_profile(username):
             email = session.get('email', None)
             location = request.form['location']
             job = request.form['job']
-            complete_profiles(email, location, job)
+            Ideal_Location = request.form['Ideal_Location']
+            Ideal_Job = request.form['Ideal_Job']
+
+            complete_profiles(email, location, job, Ideal_Location, Ideal_Job)
             return render_template('temp_landing.html', username=username)
     return render_template('complete_profile.html', username=username)
 
