@@ -1,9 +1,8 @@
 from App import application
-from dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles, view_customers
-from Emailer import send_mail
+from .dbconnect import enteremail,createusernameandpassword,retrieve_email, complete_profiles, view_customers
+from .Emailer import send_mail
 import pandas as pd
 import numpy as np
-#this is a comment3
 from flask import Flask, flash, redirect, render_template, request, session, abort, url_for, jsonify, Response
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user 
 from flask_mail import Mail, Message
@@ -65,13 +64,13 @@ def login():
                 return abort(401)  # good place to add a fun error page
 
         if request.form['btn'] == 'Signup':
-            print "1"
+            print("1")
             name = request.form['name']
             surname = request.form['surname']
             email = request.form['email']
-            print "2"
+            print("2")
             enteremail(email)
-            print "3"
+            print("3")
             session['email'] = email
             return redirect(url_for('complete_registration', username=name))
     return render_template('index.html')
@@ -84,7 +83,10 @@ def complete_profile(username):
             email = session.get('email', None)
             location = request.form['location']
             job = request.form['job']
-            complete_profiles(email, location, job)
+            Ideal_Location = request.form['Ideal_Location']
+            Ideal_Job = request.form['Ideal_Job']
+
+            complete_profiles(email, location, job, Ideal_Location, Ideal_Job)
             return render_template('temp_landing.html', username=username)
     return render_template('complete_profile.html', username=username)
 
@@ -95,7 +97,7 @@ def complete_registration(username):
             username = request.form['username']
             password = request.form['password']
             email = session.get('email', None)
-            print email
+            print(email)
             createusernameandpassword(email, username, password)
             send_mail(email, username)
             return render_template('check_mail.html', username=username)  # change to redirect to a 'check your mail to complete registration' landing page
@@ -105,13 +107,13 @@ def complete_registration(username):
 @application.route('/welcome_page/<username>', methods=['GET', 'POST'])
 def welcome(username):
     if request.method == 'POST':
-        print "1"
+        print("1")
         if request.form['btn'] == 'Complete':
-            print "2"
+            print("2")
             email = retrieve_email(username)
-            print "3"
+            print("3")
             session['email'] = email
-            print "4"
+            print("4")
             return redirect(url_for('complete_profile', username=username))
     return render_template('welcome.html', username=username)
 
