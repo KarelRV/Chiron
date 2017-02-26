@@ -13,6 +13,7 @@ from flask_mail import Mail, Message
 login_manager = LoginManager()
 login_manager.init_app(application)
 login_manager.login_view = "login"
+login_manager.session_protection = "strong"
 # silly user model
 
 class User(UserMixin):
